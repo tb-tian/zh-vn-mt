@@ -7,9 +7,9 @@ This repository contains tools for aligning Chinese-Vietnamese sentence pairs us
 ```
 zh-vn-mt/
 ├── README.md
-├── vecalign_sbert.py              # Main alignment script using Vecalign + LaBSE
-├── vecalign_sbert_notebook.ipynb  # Interactive notebook for Vecalign alignment
-├── bertalign_sbert_notebook.ipynb # Interactive notebook for Bertalign alignment
+├── vecalign_sbert.py              # An approach using Vecalign + LaBSE
+├── vecalign_sbert_notebook.ipynb  # Another approach using Vecalign in Notebook
+├── bertalign_sbert_notebook.ipynb # An approach using Bertalign in Notebook
 ├── vecalign/                      # Vecalign library (cloned from GitHub)
 └── bertalign/                     # Bertalign library (cloned from GitHub)
 ```
