@@ -1,0 +1,48 @@
+# IDE
+.vscode/*
+
+# Cloned repositories (external dependencies)
+bertalign/
+vecalign/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (large/generated)
+*.pdf
+data.json
+subset.json
+subsubset.json
+
+# Corpus output files
+corpus_*.json
+corpus_*.tsv
+corpus_*.vi
+corpus_*.zh
+
+# Test results
+*_test_results.json
+translation_test_results.json
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Environment
+.env
+.venv
+env/
+venv/
