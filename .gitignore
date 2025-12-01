@@ -21,6 +21,7 @@ build/
 *.ipynb_checkpoints
 
 # Data files (large/generated)
+*.json
 *.pdf
 data.json
 subset.json
