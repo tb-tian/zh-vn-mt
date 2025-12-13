@@ -251,7 +251,7 @@ def extract_letters_index(vi_letters, cn_letters, start_num, end_num):
         rows.append({
             "id": i,
             "vi": dict_vi.get(i, ""),
-            "cn": dict_cn.get(i, "")
+            "zh": dict_cn.get(i, "")
         })
         
     return pd.DataFrame(rows)
