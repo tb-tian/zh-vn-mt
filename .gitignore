@@ -4,6 +4,8 @@
 # Cloned repositories (external dependencies)
 bertalign/
 vecalign/
+Poppler/
+tessdata/
 
 # Python
 __pycache__/
