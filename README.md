@@ -2,25 +2,24 @@
 
 This repository contains tools for aligning Chinese-Vietnamese sentence pairs using different alignment algorithms with SBERT (Sentence-BERT) embeddings.
 
-## Repository Structure
+## Dataset preparation
+
+Download these file and renamed it.
+- JSON1: https://1drv.ms/u/c/5ee4098bb5c7cbac/IQCqzsK-ojEpRqnF7VCOoEoNAUuf4yEzuRNCE_olx_r3iuk?e=Le19rh
+- JSON2: https://1drv.ms/u/c/5ee4098bb5c7cbac/IQBscKp3XN4CTKcyPHgEFfyrAVHAOT5uEh6PBRXNbkYaHdI?e=4aEzdc
+- PDF1: https://1drv.ms/b/c/5ee4098bb5c7cbac/IQC9uPBwJnhxQqeiOSZtmgQIAdsz2nyOuhjk5hTBS6wzIyg?e=3lJQy0		
+
+## Project structure
 
 ```
 zh-vn-mt/
-├── README.md
-├── vecalign_sbert.py              # An approach using Vecalign + LaBSE
-├── vecalign_sbert_notebook.ipynb  # Another approach using Vecalign in Notebook
-├── bertalign_sbert_notebook.ipynb # An approach using Bertalign in Notebook
-├── vecalign/                      # Vecalign library (cloned from GitHub)
-└── bertalign/                     # Bertalign library (cloned from GitHub)
+├── README.md                       # Project documentation
+├── ocr/                            # OCR processing scripts and tools
+├── align.ipynb                     # Main alignment notebook
+├── json1.json                      # Downloaded and renamed dataset
+├── json2.json                      # Downloaded and renamed dataset
+└── pdf1.pdf                        # Downloaded and renamed dataset
 ```
-
-## Features
-
-- **LaBSE embeddings**: Uses Language-agnostic BERT Sentence Embedding for cross-lingual sentence representations
-- **Multiple alignment methods**: 
-  - Vecalign: Supports many-to-many alignments (1:1, 1:2, 2:1, 2:2)
-  - Bertalign: Alternative alignment algorithm
-- **Sentence segmentation**: Automatic segmentation for both Chinese and Vietnamese text
 
 ## Getting Started
 
@@ -29,56 +28,9 @@ zh-vn-mt/
 - Python 3.10+
 - CUDA-compatible GPU (recommended for faster embedding generation)
 
-### Installation
+## Team
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/tb-tian/zh-vn-mt.git
-   cd zh-vn-mt
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install sentence-transformers pysbd tqdm numpy cython
-   ```
-
-3. The alignment libraries (`vecalign` and `bertalign`) will be automatically cloned when you run the notebooks.
-
-## Usage
-
-### Using the Notebooks (Recommended)
-
-1. **Vecalign + SBERT**: Open `vecalign_sbert_notebook.ipynb`
-   - Follows the original Vecalign algorithm
-   - Best for many-to-many sentence alignments
-
-2. **Bertalign + SBERT**: Open `bertalign_sbert_notebook.ipynb`
-   - Uses the Bertalign algorithm
-   - Alternative approach for sentence alignment
-
-### Using the Python Script
-
-```python
-from vecalign_sbert import VecalignSBERT
-
-# Initialize the aligner
-aligner = VecalignSBERT(similarity_threshold=0.5)
-
-# Align your sentences
-# ... (see script for detailed usage)
-```
-
-## Output Format
-
-Aligned pairs are saved in JSON format with the following structure:
-
-```json
-{
-  "zh": "Chinese sentence",
-  "vi": "Vietnamese sentence", 
-  "similarity": 0.85,
-  "alignment_type": "1-1",
-  "source": "source_file",
-  "source_id": 0
-}
-```
+- Trương Bảo Thiên Ân - 23120019
+- Phạm Ngọc Duy - 23120035
+- Trần Kim Ngân - 23120060
+- Vũ Duy Thụ - 23120093
