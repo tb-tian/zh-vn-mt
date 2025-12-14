@@ -14,8 +14,9 @@ After unzipping the file, the project structure should look like this:
 ```
 Prj_Mid_13_23120019_23120035_23120060_23120093/
 ├── README.md                       # Project documentation
+├── corpus/                         # Aligned data
 ├── ocr/                            # OCR processing scripts and tools
-│   ├── ocr.ipynb                   # Notebook to convert PDF to JSON using OCR
+│   ├── ocr.ipynb                   # Main ocr notebook
 │   ├── utils.py                    # Helper functions for image preprocessing
 │   └── .env                        # Configuration for Tesseract/Poppler paths
 ├── align.ipynb                     # Main alignment notebook
